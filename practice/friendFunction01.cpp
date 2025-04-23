@@ -4,7 +4,8 @@
 a function can be defined as a frined function of two classes
 */
 
-class Boy; //Advance Statement
+//Advance Statement
+class Boy; 
 
 class Girl {
     public:
