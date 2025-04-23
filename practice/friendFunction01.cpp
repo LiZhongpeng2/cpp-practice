@@ -7,6 +7,7 @@ a function can be defined as a frined function of two classes
 //Advance Statement
 class Boy; 
 
+//测试
 class Girl {
     public:
         Girl(std::string n, int d);
