@@ -34,7 +34,7 @@ class Derived:protected Base{
 
 void Derived::setall(int a, int b, int c, int d, int e, int f){
     // x = a;  //错误的，在派生类中不可以直接访问
-    setx(a);
+    setx(a);   //正确
     y = b;
     z = c;
     m = d;
