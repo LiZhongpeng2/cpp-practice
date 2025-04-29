@@ -26,7 +26,7 @@ public:
 
     ~Derived()
     {
-        std::cout << "Deconstructing derived class" << std::endl;
+        std::cout << "Destructing derived class" << std::endl;
     }
 };
 
