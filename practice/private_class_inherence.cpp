@@ -28,7 +28,7 @@ public:
 
     void showxy()
     {
-        showx(); // 可以直接访问私有函数但是不能直接访问私有成员。 std::cout << x 不可以
+        showx(); // 可以直接访问public函数但是不能直接访问私有成员。 std::cout << x 不可以
         std::cout << y << std::endl;
     }
 private:
