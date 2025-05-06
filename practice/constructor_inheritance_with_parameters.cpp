@@ -42,9 +42,10 @@ int main(int argc, char const *argv[])
     float number;
     std::string name;
     float score;
-    std::cin >> number >> name >> score;
+    std::string major;
+    std::cin >> number >> name >> score >> major;
 
-    UStudent student(number, name, score);
+    UStudent student(number, name, score,major);
     student.print1();
     return 0;
 }
