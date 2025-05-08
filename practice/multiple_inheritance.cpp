@@ -28,6 +28,7 @@ class Y{
         int b;
 };
 
+//测试注释
 class Z:public X, private Y{ 
     public:
         void setZ(int x, int y){
