@@ -28,7 +28,7 @@ class Y{
         int b;
 };
 
-class Z:public X, private Y{ //多继承，单独声明继承类型，默认private: class Z:X,Y(private X, private Y)
+class Z:public X, private Y{ 
     public:
         void setZ(int x, int y){
             c = x;
