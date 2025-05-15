@@ -1,5 +1,5 @@
 #include <iostream>
-
+//虚基类引例
 class Base
 {
 public:
