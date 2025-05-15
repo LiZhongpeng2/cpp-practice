@@ -1,50 +1,61 @@
 #include <iostream>
 
 // 虚基类继承：class Base1:virtual public Base{}
+//构造函数执行顺序
 class Base
 {
 public:
-    Base()
+    Base(int sa)
     {
-        a = 5;
-        std::cout << "Base a=" << a << std::endl;
+        a = sa;
+        std::cout << "Constructing Base" << std::endl;
     }
 
-protected:
+private:
     int a;
 };
 
 class Base1 : virtual public Base
 { // 继承虚基类
 public:
-    Base1()
+    Base1(int sa, int sb):Base(sa)
     {
-        a = a + 10;
-        std::cout << "Base1 a=" << a << std::endl;
+        b = sb;
+        std::cout << "COnstructing Base1" << std::endl;
     }
+
+private:
+    int b;
 };
 
 class Base2 : virtual public Base
 {
 public:
-    Base2()
+    Base2(int sa, int sc):Base(sa)
     {
-        a = a + 20;
-        std::cout << "Base2 a=" << a << std::endl;
+        c = sc;
+        std::cout << "Construcing Base2" <<std::endl;
     }
+private:
+    int c;
 };
 
 class Derived : public Base1, public Base2
 {
 public:
-    Derived()
+    Derived(int sa, int sb, int sc, int sd):Base(sa),
+            Base1(sa, sb), Base2(sa,sc)
     {
-        std::cout << "Derived a=" << a << std::endl;
+        d = sd;
+        std::cout << "Constructing Derived" << std::endl;
     }
+
+private:
+    int d;
 };
 
 int main(int argc, char const *argv[])
 {
-    Derived obj;
+    Derived obj(2,4,6,8);
     return 0;
 }
